@@ -96,14 +96,10 @@ export default function Footer() {
 					{/* Contact Section */}
 					<div className="footer__contact">
 						<h3 className="footer__contact-title">تواصلوا معنا</h3>
-						<Link
-							href="/contact"
-							className="footer__contact-link"
-							aria-label="صفحة التواصل معنا"
-						>
+						<span className="footer__contact-link">
 							<ContactIcon className="footer__contact-icon" />
-							<span>ارسل رسالة</span>
-						</Link>
+							hawajesaqswar@gmail.com
+						</span>
 					</div>
 
 					{/* Social Media Section */}
