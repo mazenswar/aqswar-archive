@@ -1,6 +1,7 @@
 // app/journalism/[publisher]/page.js
 import { notFound } from "next/navigation";
 import PublisherTemplate from "../PublisherTemplate";
+import Link from "next/link";
 
 // Publisher configurations
 const publisherConfigs = {
@@ -177,9 +178,9 @@ export function Error({ error, reset }) {
 						<button onClick={reset} className="btn btn--primary">
 							إعادة المحاولة
 						</button>
-						<a href="/journalism" className="btn btn--secondary">
+						<Link href="/journalism" className="btn btn--secondary">
 							العودة لصفحة الصحافة
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
