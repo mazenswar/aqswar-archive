@@ -2,6 +2,18 @@
 	min-height: 70vh;
 	direction: rtl;
 	padding: var(--spacing-2xl);
+	padding-top: 80px;
+	.content-section {
+		flex-direction: column;
+	}
+}
+
+.article-page__breadcrumb {
+	position: fixed;
+	top: 104px;
+	right: 24px;
+	display: flex;
+	gap: 1rem;
 }
 
 /* Header */
@@ -28,6 +40,8 @@
 .article__viewer {
 	margin-bottom: var(--spacing-2xl);
 	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .article__viewer iframe {
@@ -75,6 +89,7 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: var(--spacing-xl);
+	width: 300px;
 }
 
 .article__nav-link {

@@ -6,11 +6,12 @@
 
 /* Header */
 .publisher-page__header {
-	background: linear-gradient(
-		135deg,
-		var(--color-secondary-dark) 0%,
-		var(--color-secondary) 100%
-	);
+	// background: linear-gradient(
+	// 	135deg,
+	// 	var(--color-secondary-dark) 0%,
+	// 	var(--color-secondary) 100%
+	// );
+	background: var(--color-primary);
 	color: var(--color-white);
 	padding: var(--spacing-2xl) 0;
 }
@@ -48,9 +49,9 @@
 }
 
 .publisher-page__title {
-	font-family: var(--font-family-primary);
-	font-weight: var(--font-weight-bold);
-
+	// font-family: var(--font-family-primary);
+	// font-weight: var(--font-weight-bold);
+	color: ivory;
 	margin-bottom: var(--spacing-md);
 }
 
