@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import mawwals from "../../data/mawwals.json";
 import "../../mawwals.scss";
-import "./mawwals.scss";
+import "./mawwal.scss";
 
 export default function MawwalDetail({ params }) {
 	const { category, id } = params;
