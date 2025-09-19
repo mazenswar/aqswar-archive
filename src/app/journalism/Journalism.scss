@@ -1,0 +1,271 @@
+.journalism-page {
+	min-height: 100vh;
+	direction: rtl;
+}
+
+/* Publications Section */
+.journalism-page__publications {
+	padding: var(--spacing-3xl) 0;
+	background-color: var(--color-ivory);
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__publications {
+		padding: 5rem 0;
+	}
+}
+
+/* Intro Section */
+.journalism-page__intro {
+	text-align: center;
+	margin-bottom: var(--spacing-3xl);
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__intro {
+		margin-bottom: 4rem;
+	}
+}
+
+.journalism-page__title {
+	font-family: var(--font-family-primary);
+	font-weight: var(--font-weight-bold);
+
+	color: var(--color-secondary-dark);
+	margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__title {
+	}
+}
+
+@media (min-width: 1280px) {
+	.journalism-page__title {
+		font-size: 3rem;
+	}
+}
+
+.journalism-page__description {
+	font-family: var(--font-family-primary);
+	line-height: var(--line-height-relaxed);
+	color: var(--color-grey-dark);
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__description {
+	}
+}
+
+/* Publications Grid */
+.journalism-page__grid {
+	display: grid;
+	gap: var(--spacing-xl);
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Publication Cards */
+.journalism-page__card {
+	background-color: var(--color-white);
+	border-radius: var(--border-radius-xl);
+	overflow: hidden;
+	transition: all var(--transition-normal);
+	box-shadow: var(--shadow-sm);
+	position: relative;
+}
+
+.journalism-page__card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lg);
+}
+
+.journalism-page__card--sada {
+	border-top: 4px solid var(--color-primary);
+}
+.journalism-page__card--panorama {
+	border-top: 4px solid var(--color-sage);
+}
+.journalism-page__card--aak {
+	border-top: 4px solid var(--color-dusty-blue);
+}
+.journalism-page__card--alayam {
+	border-top: 4px solid var(--color-terracotta);
+}
+.journalism-page__card--alwatan {
+	border-top: 4px solid var(--color-secondary);
+}
+
+.journalism-page__card-link {
+	display: block;
+	padding: var(--spacing-xl);
+	text-decoration: none;
+	color: inherit;
+	height: 100%;
+	position: relative;
+	transition: all var(--transition-fast);
+}
+
+.journalism-page__card-link:hover .journalism-page__card-arrow {
+	transform: translateX(-4px);
+	opacity: 1;
+}
+.journalism-page__card-link:hover .journalism-page__card-title {
+	color: var(--color-primary);
+}
+
+.journalism-page__card-link:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 4px;
+}
+
+.journalism-page__card-content {
+	font-family: var(--font-family-primary);
+}
+
+.journalism-page__card-title {
+	font-family: var(--font-family-primary);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-secondary-dark);
+	margin-bottom: var(--spacing-md);
+	transition: color var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__card-title {
+	}
+}
+
+.journalism-page__card-description {
+	color: var(--color-grey-dark);
+	line-height: var(--line-height-normal);
+	margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__card-description {
+	}
+}
+
+.journalism-page__card-period {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+	padding-top: var(--spacing-md);
+	border-top: 1px solid var(--color-grey-light);
+}
+
+@media (min-width: 768px) {
+	.journalism-page__card-period {
+		flex-direction: row;
+		align-items: center;
+		gap: var(--spacing-sm);
+	}
+}
+
+.journalism-page__card-period-label {
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-secondary);
+}
+
+.journalism-page__card-period-value {
+	color: var(--color-grey-dark);
+	font-weight: var(--font-weight-medium);
+}
+
+.journalism-page__card-arrow {
+	position: absolute;
+	bottom: var(--spacing-lg);
+	left: var(--spacing-xl);
+	color: var(--color-primary);
+	opacity: 0;
+	transition: all var(--transition-fast);
+	font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+	.journalism-page__card-arrow {
+		bottom: var(--spacing-xl);
+		left: var(--spacing-xl);
+	}
+}
+
+/* Enhanced hover on desktop */
+@media (min-width: 1280px) {
+	.journalism-page__card:hover {
+		transform: translateY(-6px) scale(1.02);
+	}
+
+	.journalism-page__card-link:hover .journalism-page__card-content {
+		transform: translateY(-2px);
+	}
+}
+
+/* Loading states */
+.journalism-page__card--loading .journalism-page__card-title,
+.journalism-page__card--loading .journalism-page__card-description,
+.journalism-page__card--loading .journalism-page__card-period-value {
+	background: linear-gradient(
+		90deg,
+		var(--color-grey-light) 25%,
+		rgba(240, 240, 240, 0.5) 50%,
+		var(--color-grey-light) 75%
+	);
+	background-size: 200% 100%;
+	animation: loading 1.5s infinite;
+	border-radius: var(--border-radius-sm);
+	color: transparent;
+}
+
+@keyframes loading {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+
+/* Print styles */
+@media print {
+	.journalism-page__card {
+		break-inside: avoid;
+		box-shadow: none;
+		border: 1px solid var(--color-grey-light);
+	}
+	.journalism-page__card-arrow {
+		display: none;
+	}
+	.journalism-page__grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing-lg);
+	}
+}
+
+/* High contrast */
+@media (prefers-contrast: high) {
+	.journalism-page__card {
+		border: 2px solid var(--color-grey-dark);
+	}
+	.journalism-page__card-link:focus-visible {
+		outline-width: 3px;
+	}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.journalism-page__card,
+	.journalism-page__card-link,
+	.journalism-page__card-arrow,
+	.journalism-page__card-content,
+	.journalism-page__card-title {
+		transition: none;
+	}
+	.journalism-page__card:hover {
+		transform: none;
+	}
+}

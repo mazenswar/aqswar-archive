@@ -1,0 +1,43 @@
+.mawwal {
+	/* existing styles... */
+}
+
+/* Viewer */
+.mawwal__viewer img {
+	height: 60vh;
+	width: auto;
+}
+
+/* Navigation */
+.mawwal__nav {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+	margin-top: var(--spacing-xl);
+}
+
+.mawwal__nav-link {
+	color: var(--color-primary);
+	font-weight: var(--font-weight-medium);
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+.mawwal__nav-link:hover {
+	color: var(--color-primary-dark);
+}
+
+.mawwal__nav-link--disabled {
+	color: var(--color-grey);
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.6;
+}
+
+.mawwal__nav-link--prev::after {
+	content: " →";
+}
+
+.mawwal__nav-link--next::before {
+	content: "← ";
+}

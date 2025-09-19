@@ -1,0 +1,122 @@
+:root {
+	/* ========================================================================
+     COLORS
+     ======================================================================== */
+	/* Primary palette (warm tan) */
+	--color-primary: #c09f80;
+	--color-primary-light: #d4b599;
+	--color-primary-dark: #a8855c;
+
+	/* Secondary palette (rich brown) */
+	--color-secondary: #8b6f47;
+	--color-secondary-light: #a68660;
+	--color-secondary-dark: #6d5436;
+
+	/* Neutral palette */
+	--color-ivory: #f8f6f0;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-grey-light: #f0f0f0;
+	--color-grey: #989898;
+	--color-grey-dark: #565656;
+
+	/* Accent colors (complement the warm palette) */
+	--color-sage: #9caf88;
+	--color-dusty-blue: #7d8fa3;
+	--color-terracotta: #c17767;
+
+	/* Semantic colors */
+	--color-success: #7a9471;
+	--color-warning: #d4a574;
+	--color-error: #c17767;
+	--color-info: #7d8fa3;
+
+	/* ========================================================================
+     TYPOGRAPHY
+     ======================================================================== */
+	--font-family-primary: "Noto Sans Arabic", "Cairo", "Tajawal", -apple-system,
+		BlinkMacSystemFont, sans-serif;
+	--font-family-secondary: "Noto Serif Arabic", "Amiri", "Scheherazade New",
+		Georgia, serif;
+	--font-family-mono: "Noto Sans Mono", "Fira Code", monospace;
+	--font-family-english: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+
+	/* Font weights */
+	--font-weight-light: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	/* Font sizes (adjusted for Arabic) */
+	--font-size-xs: 0.875rem; /* 14px */
+	--font-size-sm: 1rem; /* 16px */
+	--font-size-base: 1.125rem; /* 18px */
+	--font-size-lg: 1.25rem; /* 20px */
+	--font-size-xl: 1.375rem; /* 22px */
+	--font-size-2xl: 1.625rem; /* 26px */
+	--font-size-3xl: 2rem; /* 32px */
+	--font-size-4xl: 2.5rem; /* 40px */
+
+	/* Line heights */
+	--line-height-tight: 1.4;
+	--line-height-normal: 1.6;
+	--line-height-relaxed: 1.8;
+
+	/* ========================================================================
+     SPACING
+     ======================================================================== */
+	--spacing-xs: 0.25rem; /* 4px */
+	--spacing-sm: 0.5rem; /* 8px */
+	--spacing-md: 1rem; /* 16px */
+	--spacing-lg: 1.5rem; /* 24px */
+	--spacing-xl: 2rem; /* 32px */
+	--spacing-2xl: 3rem; /* 48px */
+	--spacing-3xl: 4rem; /* 64px */
+
+	/* ========================================================================
+     BREAKPOINTS
+     ======================================================================== */
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+
+	/* ========================================================================
+     BORDERS & RADII
+     ======================================================================== */
+	--border-radius-sm: 0.125rem; /* 2px */
+	--border-radius-md: 0.375rem; /* 6px */
+	--border-radius-lg: 0.5rem; /* 8px */
+	--border-radius-xl: 0.75rem; /* 12px */
+	--border-radius-full: 9999px;
+
+	/* ========================================================================
+     SHADOWS
+     ======================================================================== */
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+	/* ========================================================================
+     TRANSITIONS
+     ======================================================================== */
+	--transition-fast: 0.15s ease-in-out;
+	--transition-normal: 0.3s ease-in-out;
+	--transition-slow: 0.5s ease-in-out;
+
+	/* ========================================================================
+     Z-INDEX
+     ======================================================================== */
+	--z-index-dropdown: 1000;
+	--z-index-sticky: 1020;
+	--z-index-fixed: 1030;
+	--z-index-modal: 1040;
+	--z-index-tooltip: 1070;
+}

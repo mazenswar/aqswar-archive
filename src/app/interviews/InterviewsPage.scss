@@ -1,0 +1,248 @@
+// ==========================================================================
+// INTERVIEWS PAGE COMPONENT - RTL ARABIC LAYOUT
+// ==========================================================================
+
+.interviews-page {
+	min-height: 100vh;
+	direction: rtl;
+
+	// Header Section
+	&__header {
+		width: 100%;
+		background: var(--color-primary);
+		color: #ffffff;
+		padding: 48px 0;
+
+		@media (min-width: 768px) {
+			padding: 64px 0;
+		}
+	}
+
+	// Breadcrumb
+	&__breadcrumb {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 24px;
+
+		&-link {
+			color: rgba(255, 255, 255, 0.8);
+			text-decoration: none;
+			transition: color 0.15s ease-in-out;
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
+
+		&-separator {
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		&-current {
+			color: #ffffff;
+			font-weight: 500;
+		}
+	}
+
+	// Page Introduction
+	&__intro {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin: 0 0 16px 0;
+		color: #565656;
+
+		@media (min-width: 768px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__description {
+		line-height: 1.75;
+		opacity: 0.9;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	// Content Section
+	&__content {
+		padding: 64px 0;
+
+		@media (min-width: 768px) {
+			padding: 80px 0;
+		}
+	}
+
+	// Videos Grid
+	&__grid {
+		display: grid;
+		gap: 32px;
+		grid-template-columns: 1fr;
+		margin-bottom: 48px;
+
+		@media (min-width: 640px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px;
+		}
+
+		@media (min-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 32px;
+		}
+
+		@media (min-width: 1280px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// Video Card
+	&__video-card {
+		background-color: #ffffff;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+				0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		}
+	}
+
+	// Video Container (16:9 aspect ratio)
+	&__video-container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%; // 16:9 aspect ratio
+		overflow: hidden;
+	}
+
+	&__video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	// Video Info
+	&__video-info {
+		padding: 24px;
+	}
+
+	&__video-title {
+		margin: 0;
+		line-height: 1.5;
+		font-weight: 600;
+	}
+
+	// Stats Section
+	&__stats {
+		text-align: center;
+		padding-top: 32px;
+		border-top: 1px solid #f0f0f0;
+	}
+
+	&__count {
+		margin: 0;
+		font-weight: 500;
+		opacity: 0.8;
+	}
+}
+
+// Single column layout for mobile
+@media (max-width: 639px) {
+	.interviews-page {
+		&__video-card {
+			margin: 0 16px;
+		}
+
+		&__content {
+			padding: 48px 0;
+		}
+
+		&__grid {
+			gap: 24px;
+		}
+	}
+}
+
+// Enhanced hover effects for larger screens
+@media (min-width: 1024px) {
+	.interviews-page {
+		&__video-card {
+			&:hover {
+				transform: translateY(-6px) scale(1.02);
+			}
+		}
+	}
+}
+
+// Print styles
+@media print {
+	.interviews-page {
+		&__header {
+			background: #6d5436 !important;
+			-webkit-print-color-adjust: exact;
+			color-adjust: exact;
+		}
+
+		&__video-card {
+			break-inside: avoid;
+			box-shadow: none;
+			border: 1px solid #f0f0f0;
+		}
+
+		&__video-container {
+			&::after {
+				content: "فيديو: " attr(title);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: rgba(0, 0, 0, 0.8);
+				color: white;
+				padding: 8px 16px;
+				border-radius: 4px;
+			}
+		}
+
+		&__video {
+			display: none;
+		}
+	}
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+	.interviews-page {
+		&__video-card {
+			border: 2px solid #565656;
+		}
+	}
+}
+
+// Reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+	.interviews-page {
+		&__video-card {
+			transition: none;
+
+			&:hover {
+				transform: none;
+			}
+		}
+
+		&__breadcrumb-link {
+			transition: none;
+		}
+	}
+}

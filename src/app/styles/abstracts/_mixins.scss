@@ -1,0 +1,178 @@
+@use "variables" as v;
+
+// ==========================================================================
+// RTL MIXINS
+// ==========================================================================
+
+// RTL directional properties
+@mixin margin-start($value) {
+	margin-inline-start: $value;
+}
+
+@mixin margin-end($value) {
+	margin-inline-end: $value;
+}
+
+@mixin padding-start($value) {
+	padding-inline-start: $value;
+}
+
+@mixin padding-end($value) {
+	padding-inline-end: $value;
+}
+
+@mixin border-start($value) {
+	border-inline-start: $value;
+}
+
+@mixin border-end($value) {
+	border-inline-end: $value;
+}
+
+// RTL positioning
+@mixin start($value) {
+	inset-inline-start: $value;
+}
+
+@mixin end($value) {
+	inset-inline-end: $value;
+}
+
+// Text alignment for RTL
+@mixin text-start {
+	text-align: start;
+}
+
+@mixin text-end {
+	text-align: end;
+}
+
+// Responsive breakpoints (same as before)
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == sm {
+		@media (min-width: v.$breakpoint-sm) {
+			@content;
+		}
+	}
+	@if $breakpoint == md {
+		@media (min-width: v.$breakpoint-md) {
+			@content;
+		}
+	}
+	@if $breakpoint == lg {
+		@media (min-width: v.$breakpoint-lg) {
+			@content;
+		}
+	}
+	@if $breakpoint == xl {
+		@media (min-width: v.$breakpoint-xl) {
+			@content;
+		}
+	}
+	@if $breakpoint == 2xl {
+		@media (min-width: v.$breakpoint-2xl) {
+			@content;
+		}
+	}
+}
+
+// Flexbox utilities
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-start {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@mixin flex-end {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+// Typography mixins for Arabic
+@mixin font-smooth {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin arabic-text {
+	direction: rtl;
+	text-align: right;
+	line-height: v.$line-height-normal;
+}
+
+@mixin arabic-title {
+	direction: rtl;
+	text-align: right;
+	font-weight: v.$font-weight-semibold;
+	line-height: v.$line-height-tight;
+}
+
+@mixin english-text {
+	direction: ltr;
+	text-align: left;
+}
+
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+	display: -webkit-box;
+	-webkit-line-clamp: v.$lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+// Positioning
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Focus states (adjusted for RTL)
+@mixin focus-outline {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+// Button reset
+@mixin button-reset {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+// Visually hidden
+@mixin visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}

@@ -1,0 +1,180 @@
+/* Box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Root HTML */
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+	direction: rtl; /* RTL default */
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: var(--font-family-primary);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-grey-dark);
+	background-color: var(--color-ivory);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	padding-top: 80px;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-section {
+	margin: var(--spacing-2xl) 0;
+	width: 100%;
+}
+
+/* Focus management */
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+	background-color: rgba(192, 159, 128, 0.2); /* color-primary with alpha */
+	color: var(--color-primary-dark);
+}
+
+/* Image defaults */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Link defaults */
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+	color: var(--color-primary-dark);
+}
+
+/* Arabic-specific typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-primary);
+	font-weight: var(--font-weight-bold);
+	margin: 0 0 var(--spacing-md) 0;
+	color: var(--color-secondary-dark);
+}
+
+h1 {
+	line-height: var(--line-height-tight);
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 3rem;
+	}
+}
+
+h2 {
+}
+
+@media (min-width: 768px) {
+	h2 {
+	}
+}
+
+h3 {
+}
+
+@media (min-width: 768px) {
+	h3 {
+	}
+}
+
+h4 {
+}
+
+@media (min-width: 768px) {
+	h4 {
+	}
+}
+
+h5 {
+}
+
+@media (min-width: 768px) {
+	h5 {
+	}
+}
+
+h6 {
+}
+
+@media (min-width: 768px) {
+	h6 {
+	}
+}
+
+p {
+	font-family: var(--font-family-primary);
+	margin: 0 0 var(--spacing-md) 0;
+	color: var(--color-grey-dark);
+}
+
+/* Lists */
+ul,
+ol {
+	font-family: var(--font-family-primary);
+	padding-inline-start: var(--spacing-xl);
+	margin: 0 0 var(--spacing-md) 0;
+}
+
+li {
+	margin-bottom: var(--spacing-xs);
+}
+
+/* English content overrides */
+.english-content {
+	font-family: var(--font-family-english);
+	direction: ltr;
+	text-align: left;
+}
+
+.english-content h1,
+.english-content h2,
+.english-content h3,
+.english-content h4,
+.english-content h5,
+.english-content h6 {
+	font-family: var(--font-family-english);
+	direction: ltr;
+	text-align: left;
+}
+
+.english-content p,
+.english-content li {
+	font-family: var(--font-family-english);
+	direction: ltr;
+	text-align: left;
+}

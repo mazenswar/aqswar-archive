@@ -1,0 +1,42 @@
+.photos {
+	/* existing styles... */
+}
+
+.photos__viewer img {
+	height: 60vh;
+	width: auto;
+}
+
+/* Navigation */
+.photos__nav {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+	margin-top: var(--spacing-xl);
+}
+
+.photos__nav-link {
+	color: var(--color-primary);
+	font-weight: var(--font-weight-medium);
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+.photos__nav-link:hover {
+	color: var(--color-primary-dark);
+}
+
+.photos__nav-link--disabled {
+	color: var(--color-grey);
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.6;
+}
+
+.photos__nav-link--prev::after {
+	content: " →";
+}
+
+.photos__nav-link--next::before {
+	content: "← ";
+}
