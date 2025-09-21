@@ -47,19 +47,6 @@ const publisherConfigs = {
 	},
 };
 
-// metaaa
-
-export const metadata = {
-	title: "مقالات الصحافة | هواجس عقيل سوار",
-	description: "تصفح مقالات عقيل سوار بحسب الصحيفة أو الجهة الناشرة",
-	icons: {
-		icon: "/favicon.ico",
-		shortcut: "/favicon.ico",
-		apple: "/apple-touch-icon.png",
-	},
-	manifest: "/site.webmanifest",
-};
-
 // Dynamic import function for articles
 async function getArticlesData(publisher) {
 	try {
