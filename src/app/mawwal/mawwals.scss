@@ -96,9 +96,9 @@
 
 /* Grid */
 .mawwals__grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-	gap: var(--spacing-lg);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
 }
 
 /* Card */

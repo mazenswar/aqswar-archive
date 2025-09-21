@@ -4,7 +4,7 @@ import PhotosList from "./PhotosList";
 async function PhotoListPage({ params }) {
 	const { category } = await params;
 	const cat = {
-		sm: "مواقع التواصل الاجتماعية",
+		social: "مواقع التواصل الاجتماعية",
 		aak: "أخبار الخليج",
 	};
 

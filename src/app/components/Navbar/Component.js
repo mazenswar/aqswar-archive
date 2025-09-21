@@ -48,7 +48,12 @@ export default function Navbar() {
 	const isActiveLink = (href) => pathname === href;
 
 	return (
-		<nav className="navbar" role="navigation" aria-label="الرئيسية">
+		<nav
+			className="navbar"
+			id="main-nav"
+			role="navigation"
+			aria-label="الرئيسية"
+		>
 			<div className="navbar__container">
 				<div className="navbar__brand">
 					<Link

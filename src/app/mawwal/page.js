@@ -3,13 +3,13 @@ import "./mawwals.scss";
 import HeroSection from "../components/HeroSection/Component";
 
 const cat = {
-	sm: "مواقع التواصل الاجتماعية",
+	social: "مواقع التواصل الاجتماعية",
 	aak: "أخبار الخليج",
 };
 
 export default function MawwalCategories() {
 	// Get unique categories with Arabic name
-	const categories = ["aak", "sm"];
+	const categories = ["aak", "social"];
 
 	return (
 		<main className="mawwals" dir="rtl">
