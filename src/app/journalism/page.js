@@ -41,14 +41,16 @@ const publications = [
 	},
 ];
 
-// Metadata for Next.js
 export const metadata = {
-	title: "الصحافة - عقيل آل سوار",
-	description: "مسيرة عقيل آل سوار الصحفية في المطبوعات البحرينية والخليجية",
-	openGraph: {
-		title: "الصحافة - عقيل آل سوار",
-		description: "مسيرة عقيل آل سوار الصحفية في المطبوعات البحرينية والخليجية",
+	title: "الصحافة | هواجس عقيل سوار",
+	description:
+		"أرشيف مقالات عقيل سوار الصحفية المنشورة في الصحف البحرينية والعربية",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
 	},
+	manifest: "/site.webmanifest",
 };
 
 export default function JournalismPage() {

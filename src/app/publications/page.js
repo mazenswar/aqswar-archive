@@ -10,6 +10,17 @@ const publications = {
 	makaka: "مكاكة عشق",
 };
 
+export const metadata = {
+	title: "إصدارات | هواجس عقيل سوار",
+	description: "أرشيف إصدارات عقيل سوار.",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
+	},
+	manifest: "/site.webmanifest",
+};
+
 function Publications() {
 	return (
 		<main>

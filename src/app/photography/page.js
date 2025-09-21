@@ -8,6 +8,17 @@ const cat = {
 	event: "حفل تدشين الموقع",
 };
 
+export const metadata = {
+	title: "التصوير | هواجس عقيل سوار",
+	description: "أرشيف صور عقيل سوار.",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
+	},
+	manifest: "/site.webmanifest",
+};
+
 export default function PhotosCategories() {
 	// Get unique categories with Arabic name
 	const categories = ["personal", "art", "event"];

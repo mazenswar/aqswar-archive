@@ -24,15 +24,15 @@ const interviews = [
 	},
 ];
 
-// Generate metadata
 export const metadata = {
-	title: "مقابلات - عقيل سوار",
-	description: "مقابلات وندوات تلفزيونية مع عقيل سوار",
-	openGraph: {
-		title: "مقابلات - عقيل سوار",
-		description: "مجموعة من المقابلات والندوات التلفزيونية مع عقيل سوار",
-		type: "website",
+	title: "حوارات | هواجس عقيل سوار",
+	description: "أرشيف حوارات عقيل سوار.",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
 	},
+	manifest: "/site.webmanifest",
 };
 
 export default function InterviewsPage() {

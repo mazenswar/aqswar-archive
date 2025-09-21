@@ -7,6 +7,17 @@ const cat = {
 	aak: "أخبار الخليج",
 };
 
+export const metadata = {
+	title: "مواويل | هواجس عقيل سوار",
+	description: "أرشيف مواويل عقيل سوار.",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
+	},
+	manifest: "/site.webmanifest",
+};
+
 export default function MawwalCategories() {
 	// Get unique categories with Arabic name
 	const categories = ["aak", "social"];

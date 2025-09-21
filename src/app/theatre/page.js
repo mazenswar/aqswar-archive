@@ -4,6 +4,17 @@ import { plays } from "./data/plays"; // make sure you export plays array
 import "./theatre.scss";
 import HeroSection from "../components/HeroSection/Component";
 
+export const metadata = {
+	title: "المسرح | هواجس عقيل سوار",
+	description: "أرشيف مسرح عقيل سوار.",
+	icons: {
+		icon: "/favicon.ico",
+		shortcut: "/favicon.ico",
+		apple: "/apple-touch-icon.png",
+	},
+	manifest: "/site.webmanifest",
+};
+
 export default function TheatreIndex() {
 	return (
 		<main className="theatre" dir="rtl">

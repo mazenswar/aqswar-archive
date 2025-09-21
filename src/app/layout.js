@@ -13,8 +13,7 @@ const tajawal = Tajawal({
 
 export const metadata = {
 	title: "هواجس عقيل سوار",
-	description:
-		"أرشيف أعمال عقيل سوار، الصحفي والكاتب المسرحي والمؤلف البحريني، يشمل مقالاته الصحفية وكتبه للأطفال ونصوصه المسرحية.",
+	description: "أرشيف أعمال عقيل سوار، الصحفي والكاتب المسرحي والمؤلف البحريني",
 	icons: {
 		icon: "/favicon.ico",
 		shortcut: "/favicon.ico",
